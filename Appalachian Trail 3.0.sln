@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appalachian Trail 3.0", "Appalachian Trail 3.0\Appalachian Trail 3.0.csproj", "{70CD29EE-4B31-466E-A392-D2585E41DBAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70CD29EE-4B31-466E-A392-D2585E41DBAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70CD29EE-4B31-466E-A392-D2585E41DBAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70CD29EE-4B31-466E-A392-D2585E41DBAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70CD29EE-4B31-466E-A392-D2585E41DBAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78369C7A-4BDC-4916-AC8F-1236F95C85A7}
+	EndGlobalSection
+EndGlobal
