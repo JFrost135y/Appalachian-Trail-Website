@@ -1,8 +1,42 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<link href="~/Content/Site.css" rel="stylesheet" type="text/css">
+<!-- Slideshow container -->
+<div class="slideshow-container">
 
-<div class="jumbotron">
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="~/Content/images/image1.png" style="width:800px; height:500px">
+        <div class="text">Caption Text</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="~/Content/images/Image2.jpg" style="width:800px; height:500px">
+        <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="~/Content/images/image3.jpg" style="width:800px; height:500px">
+        <div class="text">Caption Three</div>
+    </div>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script src="~/Scripts/JavaScript.js"></script>
+
+
+<!--<div class="jumbotron">
     <h1>ASP.NET Identity</h1>
     <p class="lead">ASP.NET Identity is the membership system for ASP.NET apps. Following are the features of ASP.NET Identity in this sample application.</p>
     <p><a href="http://www.asp.net/identity" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
@@ -229,4 +263,4 @@
             </dd>
         </dl>
     </div>
-</div>
+</div>-->

@@ -15,6 +15,7 @@ namespace Appalachian_Trail_3._0.Models
 
         public int ShelterID { get; set; }
 
+        //This is the Trail Start Date
         public System.DateTime StartDate { get; set; }
 
         public int DaysOnTrail { get; set; }
