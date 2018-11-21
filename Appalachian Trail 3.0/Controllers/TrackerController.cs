@@ -12,6 +12,7 @@ namespace Appalachian_Trail_3._0.Controllers
     {
         ApplicationDbContext db = new ApplicationDbContext();
         // GET: Tracker
+        //[Authorize]
         public ActionResult Index()
         {
             var State = db.Shelters.Select(x=>x.State).Distinct().ToList();
@@ -22,6 +23,17 @@ namespace Appalachian_Trail_3._0.Controllers
                 States.Add(li);
             }
             return View(States);
+        }
+        public JsonResult GetSheltersByState(string state)
+        {
+            var Shelters = db.Shelters.Where(x=>x.State==state)
+                .Select(x=> new ShelterSelectItem
+                {
+                    ShelterName = x.ShelterName,
+                    ShelterID = x.ShelterID
+                })
+                .ToList();
+            return Json(Shelters, JsonRequestBehavior.AllowGet);
         }
     }
 }

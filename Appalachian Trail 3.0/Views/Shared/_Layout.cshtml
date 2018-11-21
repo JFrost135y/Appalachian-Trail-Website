@@ -6,6 +6,8 @@
     <title>@ViewBag.Title - Appalachian Trail Tracker</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
 
 </head>
 <body>
@@ -17,15 +19,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Appalachian Trail Distance Tracker", "Index", "Home", null, new { @class = "navbar-brand" })
+                @Html.ActionLink("Appalachian Trail Tracker", "Index", "Home", null, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Distance Tracker", "Index", "Tracker")</li>
 
-                    @if (Request.IsAuthenticated && User.IsInRole("Admin")) {
+                    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                    {
                         <li>@Html.ActionLink("RolesAdmin", "Index", "RolesAdmin")</li>
                         <li>@Html.ActionLink("UsersAdmin", "Index", "UsersAdmin")</li>
                     }
@@ -42,8 +46,6 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>

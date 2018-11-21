@@ -5,4 +5,44 @@
 }
 
 <h2>Index</h2>
-@Html.DropDownList("State",Model)
+<div>
+    @Html.DropDownList("StartState", Model)
+    <select id="StartShelters">
+        <option value="select"></option>
+    </select>
+</div>
+<div>
+    @Html.DropDownList("EndState", Model)
+    <select id="EndShelters">
+        <option value="select"></option>
+    </select>
+</div>
+<script>
+
+    $("#EndState").change(function () {
+        //debugger;
+        //alert($(this).val());
+        GetShelters($(this).val(), "EndShelters");
+    });
+
+    $("#StartState").change(function () {
+        //debugger;
+        //alert($(this).val());
+        GetShelters($(this).val(), "StartShelters");
+    });
+    function GetShelters(state,dropdownName) {
+        //debugger;
+        var url = '@Url.Content("~/")' + "Tracker/GetSheltersByState";
+        //$.getJSON(url, { state: state }, function (data) { alert(data); });
+        $.getJSON(url, { state: state }, function (data) {
+            $("#" + dropdownName).empty();
+
+            $.each(data, function (i,obj) {
+                //debugger;
+                var div_data = "<option value=" + obj.ShelterID + ">" + obj.ShelterName + "</option>";
+                //alert(div_data);
+                $(div_data).appendTo("#" + dropdownName);
+            })
+        });
+    }
+</script>
